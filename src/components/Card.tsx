@@ -66,7 +66,7 @@ const Card: Component<Props> = (props) => {
 
   return (
     <div
-      class="flex items-center justify-around w-[200px] p-4 border border-gray-200 rounded-lg shadow-sm cursor-pointer"
+      class="flex items-center justify-around p-4 border border-gray-200 rounded-lg shadow-sm cursor-pointer"
       onClick={onClick}
       onKeyUp={onClick}
     >

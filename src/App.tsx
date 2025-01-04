@@ -32,7 +32,7 @@ const App: Component = () => {
   ];
 
   return (
-    <div class="flex gap-4 p-4">
+    <div class="grid grid-cols-2 gap-4 p-4">
       {sites.map((site) => (
         <Card name={site.name} url={site.url} logo={site.logo} />
       ))}
