@@ -66,11 +66,15 @@ const Card: Component<Props> = (props) => {
 
   return (
     <div
-      class="flex items-center justify-around p-4 border border-gray-200 rounded-lg shadow-sm cursor-pointer"
+      class="flex items-center justify-around p-4 rounded-[2px] cursor-pointer bg-[#DFDFDF14] hover:bg-[#DFDFDF1A] transition-colors"
       onClick={onClick}
       onKeyUp={onClick}
     >
-      <img class="w-8 h-8" src={props.logo} alt={props.name} />
+      <img
+        class="w-8 h-8 bg-white rounded-[8px] p-1"
+        src={props.logo}
+        alt={props.name}
+      />
       <div class="flex flex-col items-center min-w-[90px]">
         <div class="font-bold">{props.name}</div>
         <div class={displayColor()}>{displayStatus()}</div>
