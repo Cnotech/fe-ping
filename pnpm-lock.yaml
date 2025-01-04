@@ -33,6 +33,9 @@ importers:
       vite:
         specifier: ^6.0.0
         version: 6.0.0(jiti@2.4.2)(tsx@4.19.2)
+      vite-plugin-singlefile:
+        specifier: ^2.1.0
+        version: 2.1.0(rollup@4.27.4)(vite@6.0.0(jiti@2.4.2)(tsx@4.19.2))
       vite-plugin-solid:
         specifier: ^2.11.0
         version: 2.11.0(solid-js@1.9.3)(vite@6.0.0(jiti@2.4.2)(tsx@4.19.2))
@@ -947,6 +950,10 @@ packages:
     resolution: {integrity: sha512-eRtbOb1N5iyH0tkQDAoQ4Ipsp/5qSR79Dzrz8hEPxRX10RWWR/iQXdoKmBSRCThY1Fh5EhISDtpSc93fpxUniQ==}
     engines: {node: '>=12.13'}
 
+  micromatch@4.0.8:
+    resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
+    engines: {node: '>=8.6'}
+
   mlly@1.7.3:
     resolution: {integrity: sha512-xUsx5n/mN0uQf4V548PKQ+YShA4/IW0KI1dZhrNrPCLG+xizETbHTkOa1f8/xut9JRPp8kQuMnz0oqwkTiLo/A==}
 
@@ -1098,6 +1105,13 @@ packages:
 
   validate-html-nesting@1.2.2:
     resolution: {integrity: sha512-hGdgQozCsQJMyfK5urgFcWEqsSSrK63Awe0t/IMR0bZ0QMtnuaiHzThW81guu3qx9abLi99NEuiaN6P9gVYsNg==}
+
+  vite-plugin-singlefile@2.1.0:
+    resolution: {integrity: sha512-7tJo+UgZABlKpY/nubth/wxJ4+pUGREPnEwNOknxwl2MM0zTvF14KTU4Ln1lc140gjLLV5mjDrvuoquU7OZqCg==}
+    engines: {node: '>18.0.0'}
+    peerDependencies:
+      rollup: ^4.28.1
+      vite: ^5.4.11 || ^6.0.0
 
   vite-plugin-solid@2.11.0:
     resolution: {integrity: sha512-G+NiwDj4EAeUE0wt3Ur9f+Lt9oMUuLd0FIxYuqwJSqRacKQRteCwUFzNy8zMEt88xWokngQhiFjfJMhjc1fDXw==}
@@ -2037,6 +2051,11 @@ snapshots:
     dependencies:
       is-what: 4.1.16
 
+  micromatch@4.0.8:
+    dependencies:
+      braces: 3.0.3
+      picomatch: 2.3.1
+
   mlly@1.7.3:
     dependencies:
       acorn: 8.14.0
@@ -2217,6 +2236,12 @@ snapshots:
       picocolors: 1.1.1
 
   validate-html-nesting@1.2.2: {}
+
+  vite-plugin-singlefile@2.1.0(rollup@4.27.4)(vite@6.0.0(jiti@2.4.2)(tsx@4.19.2)):
+    dependencies:
+      micromatch: 4.0.8
+      rollup: 4.27.4
+      vite: 6.0.0(jiti@2.4.2)(tsx@4.19.2)
 
   vite-plugin-solid@2.11.0(solid-js@1.9.3)(vite@6.0.0(jiti@2.4.2)(tsx@4.19.2)):
     dependencies:
