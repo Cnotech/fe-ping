@@ -23,6 +23,25 @@ const Card: Component<Props> = (props) => {
         return "点击测速";
     }
   });
+  const displayColor = createMemo(() => {
+    if (status() === "success") {
+      if (ping() < 200) {
+        return "text-green-500";
+      }
+      if (ping() < 1000) {
+        return "text-yellow-500";
+      }
+      return "text-red-500";
+    }
+    switch (status()) {
+      case "running":
+        return "text-blue-500";
+      case "error":
+        return "text-red-500";
+      default:
+        return "text-gray-500";
+    }
+  });
 
   async function onClick() {
     const abortController = new AbortController();
@@ -53,7 +72,7 @@ const Card: Component<Props> = (props) => {
       <img class="w-8 h-8" src={props.logo} alt={props.name} />
       <div class="flex flex-col items-center">
         <div class="font-bold">{props.name}</div>
-        <div>{displayStatus()}</div>
+        <div class={displayColor()}>{displayStatus()}</div>
       </div>
     </div>
   );
