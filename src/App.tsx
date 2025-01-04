@@ -1,25 +1,27 @@
-import type { Component } from 'solid-js';
-
-import logo from './logo.svg';
-import styles from './App.module.css';
+import type { Component } from "solid-js";
+import Google from "./assets/google.ico";
+import Baidu from "./assets/baidu.ico";
+import Card from "./components/Card";
 
 const App: Component = () => {
+  const sites = [
+    {
+      name: "Google",
+      url: "https://www.google.com",
+      logo: Google,
+    },
+    {
+      name: "Baidu",
+      url: "https://www.baidu.com",
+      logo: Baidu,
+    },
+  ];
+
   return (
-    <div class={styles.App}>
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a>
-      </header>
+    <div class="flex gap-4 p-4">
+      {sites.map((site) => (
+        <Card name={site.name} url={site.url} logo={site.logo} />
+      ))}
     </div>
   );
 };
