@@ -1,13 +1,13 @@
 {
-  "name": "vite-template-solid",
-  "version": "0.0.0",
-  "description": "",
+  "name": "fe-ping",
+  "version": "0.1.0",
+  "description": "Frontend Implementation of Web Connectivity Testing",
   "type": "module",
   "scripts": {
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "preview": "vite preview"
   },
   "license": "MIT",
   "devDependencies": {
