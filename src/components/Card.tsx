@@ -1,4 +1,5 @@
 import { createMemo, createSignal, type Component } from "solid-js";
+import Loading from "./Loading";
 
 interface Props {
   name: string;
@@ -14,11 +15,11 @@ const Card: Component<Props> = (props) => {
   const displayStatus = createMemo(() => {
     switch (status()) {
       case "running":
-        return "Running...";
+        return <Loading />;
       case "success":
         return `${ping().toFixed(2)}ms`;
       case "error":
-        return "Error!";
+        return "Timeout";
       default:
         return "点击测速";
     }
@@ -70,7 +71,7 @@ const Card: Component<Props> = (props) => {
       onKeyUp={onClick}
     >
       <img class="w-8 h-8" src={props.logo} alt={props.name} />
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center min-w-[90px]">
         <div class="font-bold">{props.name}</div>
         <div class={displayColor()}>{displayStatus()}</div>
       </div>

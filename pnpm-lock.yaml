@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@unocss/preset-icons':
+        specifier: ^0.65.3
+        version: 0.65.3
       solid-js:
         specifier: ^1.9.3
         version: 1.9.3
@@ -15,6 +18,9 @@ importers:
       '@biomejs/biome':
         specifier: 1.9.4
         version: 1.9.4
+      '@iconify-json/eos-icons':
+        specifier: ^1.2.2
+        version: 1.2.2
       '@unocss/preset-uno':
         specifier: ^0.65.3
         version: 0.65.3
@@ -460,6 +466,9 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@iconify-json/eos-icons@1.2.2':
+    resolution: {integrity: sha512-kYfV1WfgiHDbWdG9JEbV1K77MvksRmo9KIM4VjtYFMnF8pKqTv4MoLIOdCD2lbRlhBZspxr1GKde5Z/LYqz3Qw==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -1465,6 +1474,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.24.0':
     optional: true
+
+  '@iconify-json/eos-icons@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify/types@2.0.0': {}
 

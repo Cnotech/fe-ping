@@ -3,5 +3,5 @@
   "editor.codeActionsOnSave": {
     "quickfix.biome": "explicit"
   },
-  "cSpell.words": ["Attributify"]
+  "cSpell.words": ["Attributify", "unocss"]
 }
