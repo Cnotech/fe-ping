@@ -11,7 +11,7 @@ const ByteDance =
 const App: Component = () => {
   const sites = [
     {
-      name: " HUAWEI AX6",
+      name: "AX6",
       url: "http://192.168.2.1",
       logo: HuaWei,
     },
