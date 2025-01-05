@@ -1,5 +1,6 @@
 import { createMemo, createSignal, onMount, type Component } from "solid-js";
 import Loading from "./Loading";
+import { sleep } from "../utils";
 
 interface Props {
   name: string;
@@ -65,6 +66,7 @@ const Card: Component<Props> = (props) => {
   }
 
   onMount(async () => {
+    await sleep(3000);
     await onClick();
     setInterval(onClick, 60000);
   });
