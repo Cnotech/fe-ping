@@ -2,6 +2,7 @@ import type { Component } from "solid-js";
 import Google from "./assets/google.ico";
 import Baidu from "./assets/baidu.ico";
 import GitHub from "./assets/github.ico";
+import HuaWei from "./assets/huawei.png";
 import Card from "./components/Card";
 
 const ByteDance =
@@ -10,14 +11,14 @@ const ByteDance =
 const App: Component = () => {
   const sites = [
     {
+      name: " HUAWEI AX6",
+      url: "http://192.168.2.1",
+      logo: HuaWei,
+    },
+    {
       name: "Baidu",
       url: "https://www.baidu.com",
       logo: Baidu,
-    },
-    {
-      name: "ByteDance",
-      url: "https://www.douyin.com",
-      logo: ByteDance,
     },
     {
       name: "GitHub",
